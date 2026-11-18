@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NickVault — an interactive archive of classic and modern Nickelodeon series and cartoons.">
+  <title>NickVault — The Nickelodeon Archive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain"></div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="NickVault home"><span class="brand-mark">N</span><span>Nick<span>Vault</span></span></a>
+    <nav><a href="#archive">Archive</a><a href="#timeline">Timeline</a><a href="#about">About</a></nav>
+    <button class="random-btn" id="randomBtn">🎲 Surprise me</button>
+  </header>
+  <main id="home">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">THE UNOFFICIAL FAN ARCHIVE</p>
+        <h1>Where the <span>Nicktoons</span> live forever.</h1>
+        <p class="hero-text">Explore iconic Nickelodeon cartoons and series — from the first Nicktoons of the 1990s to the shows that shaped the 2000s and the newer generation.</p>
+        <div class="hero-actions"><a class="primary-btn" href="#archive">Explore the vault ↓</a><button class="ghost-btn" id="factsBtn">✨ Show a random fact</button></div>
+        <div class="hero-stats"><div><strong id="showCount">15</strong><span>shows archived</span></div><div><strong>1991</strong><span>Nicktoons era begins</span></div><div><strong>∞</strong><span>nostalgia points</span></div></div>
+      </div>
+      <div class="hero-art"><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="hero-ticket"><span class="ticket-top">NICKVAULT</span><strong>90s → NOW</strong><span>ANIMATION • LIVE ACTION • MEMORIES</span><i>★</i></div><div class="float-card fc-one">RUGRATS</div><div class="float-card fc-two">SPONGEBOB</div><div class="float-card fc-three">HEY ARNOLD!</div></div>
+    </section>
+    <section class="ticker" aria-label="Archive highlights"><div>🍍 BIKINI BOTTOM</div><div>🍼 THE PICKLES</div><div>🧡 ORANGE SPLAT</div><div>👻 AMITY PARK</div><div>🌊 REPUBLIC CITY</div><div>🎮 GAME SHAKERS</div></section>
+    <section class="section" id="archive">
+      <div class="section-heading"><div><p class="eyebrow">THE VAULT</p><h2>Pick an era. Find a memory.</h2></div><p class="section-note">Click any card for the full production file.</p></div>
+      <div class="controls"><div class="search-wrap"><span>⌕</span><input id="searchInput" type="search" placeholder="Search shows, creators, characters..." aria-label="Search shows"></div><div class="filters" id="filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="classic">1990s</button><button class="filter" data-filter="2000s">2000s</button><button class="filter" data-filter="modern">2010s–now</button><button class="filter" data-filter="animation">Animation</button><button class="filter" data-filter="live">Live action</button></div></div>
+      <div class="show-grid" id="showGrid"></div><p class="empty-state" id="emptyState">No shows found. Try another search.</p>
+    </section>
+    <section class="timeline-section" id="timeline"><div class="section-heading"><div><p class="eyebrow">A LITTLE HISTORY</p><h2>From three Nicktoons to a universe.</h2></div></div><div class="timeline"><div class="time-node"><span>1990</span><p>Nickelodeon tests eight animated pilots while developing its original animation strategy.</p></div><div class="time-node"><span>1991</span><p><strong>Doug, Rugrats and The Ren & Stimpy Show</strong> launch the original Nicktoons era.</p></div><div class="time-node"><span>1998</span><p>Nickelodeon opens its dedicated animation studio in Burbank and expands original animation.</p></div><div class="time-node"><span>1999</span><p><strong>SpongeBob SquarePants</strong> premieres and becomes a global franchise.</p></div><div class="time-node"><span>2000s</span><p>The era of Fairly OddParents, Jimmy Neutron, Danny Phantom and Avatar arrives.</p></div><div class="time-node"><span>2010s–now</span><p>New generations arrive alongside reboots, spin-offs and streaming-era Nickelodeon productions.</p></div></div></section>
+    <section class="about" id="about"><div><p class="eyebrow">ABOUT THIS PROJECT</p><h2>A fan-made digital museum.</h2></div><div class="about-copy"><p>NickVault is a front-end project built with <strong>pure HTML5, CSS3 and vanilla JavaScript</strong>. It is designed as a portfolio-style site: responsive, interactive and easy to expand.</p><p><strong>Important production note:</strong> television-series budgets are often not publicly disclosed. Where no reliable public figure is available, this archive says so instead of inventing a number. Movie budgets are separate and should not be presented as the cost of producing the television series.</p></div></section>
+  </main>
+  <footer><div><strong>NickVault</strong> — an unofficial fan project.</div><div>Built with HTML5 • CSS3 • Vanilla JS</div></footer>
+  <div class="modal" id="modal" aria-hidden="true"><div class="modal-backdrop" id="modalBackdrop"></div><article class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="close-modal" id="closeModal" aria-label="Close">×</button><div class="modal-poster" id="modalPoster"></div><div class="modal-content"><div class="modal-kicker" id="modalKicker"></div><h2 id="modalTitle"></h2><p id="modalDescription"></p><div class="fact-grid" id="modalFacts"></div><div class="why-box"><span>WHY PEOPLE REMEMBER IT</span><p id="modalWhy"></p></div><a id="sourceLink" class="source-link" href="#" target="_blank" rel="noopener">Research / official reference ↗</a></div></article></div>
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+</body>
+</html>
